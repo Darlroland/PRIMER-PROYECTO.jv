@@ -1,0 +1,28 @@
+body {
+    
+    background-color: aqua
+}
+
+p {
+    color: blue;
+}
+
+/* documentar */
+
+#prueba {
+    background-color: brown;
+    
+}
+
+#prueba h2 ,h3 ,h4 {
+    font-size: 50px;
+}
+
+.btn {
+    font-size: 50px;
+}
+
+.texto-resaltado{
+    color: purple;
+    background-color: hotpink;
+}

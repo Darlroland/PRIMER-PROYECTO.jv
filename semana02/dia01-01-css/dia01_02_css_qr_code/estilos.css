@@ -1,0 +1,30 @@
+body {
+    background-color:hsl(212, 45%, 89%) ;
+    font-size: 10px;
+    display: flex;  /* flexbox */
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    height: 100vh; /*100% de la altura */
+
+}
+main{
+
+   
+    width: 250px;
+    padding: 15px; /*interno espacio*/
+    background-color: hsl(0, 09%, 100%);
+    border-radius: 15px;
+}
+img{
+    border-radius: 15px;
+}
+
+h1 {
+    color: hsl(218, 44%, 22%);
+    font-size: 20px ;
+    text-align: center;
+}
+p{
+    color: hsl(216, 15%, 48%);
+    text-align: center;
+}

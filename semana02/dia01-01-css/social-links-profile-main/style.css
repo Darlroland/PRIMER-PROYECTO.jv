@@ -1,0 +1,72 @@
+body {
+    font-family: "Inter", sans-serif;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 8%);
+
+    font-size: 14px;
+}
+
+.perfil {
+    background-color: hsl(0, 0%, 12%);
+    padding: 35px ;
+    border-radius: 13px;
+    text-align: center;
+
+}
+img {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h1 {
+
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding: 0 20px;
+
+}
+
+.ubicacion {
+    color: hsl(75, 94%, 57%);
+    margin: 0;
+
+
+
+}
+.biog {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+    padding:  0;
+    
+    
+}
+
+
+
+a { 
+    display: block;
+    background-color:hsl(0, 0%, 20%) ;
+
+    padding: 8px ;
+    margin-bottom: 16px;
+
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px; 
+    
+    font-weight: 400;
+}

@@ -1,6 +1,10 @@
 body {
+
+    font-family: "Outfit", sans-serif;
+
+
     background-color:hsl(212, 45%, 89%) ;
-    font-size: 10px;
+    font-size: 15px;
     display: flex;  /* flexbox */
     justify-content: center; /* horizontal */
     align-items: center; /* vertical */

@@ -1,0 +1,57 @@
+import './Card.css'
+
+const Card = () => {
+  return (
+    <section
+      className="card"
+      style={{ backgroundColor: 'yellow', padding: '8px' }}
+    >
+      <h1 className='title'>Hola React!</h1>
+
+      <p className='description'>
+        Estoy aprendiendo estilos con React.js!
+      </p>
+
+      <button className='button'>
+        OK
+      </button>
+    </section>
+  )
+}
+
+const CardContailwindCSS = () =>{
+    return (
+    <section
+      className="mt-4 bg-orange-500 w-[300px] p-4 flex flex-col gap-4"
+
+    >
+      <h1 className='text-xl font-bold mb-2 text-center'>
+        Hola React!</h1>
+
+      <p className='text-center'>
+        Estoy aprendiendo estilos con React.js!
+      </p>
+
+      <button className='w-full bg-blue-500 p-2 rounded-md'>
+        OK
+      </button>
+    </section>
+  )
+}
+
+
+const App = () => {
+  return (
+    <section>
+      <h1 className='text=2x1 text-center text-amber-700 mb-8'>
+        React +css+ tailwindcss
+      </h1>
+
+      <Card/>
+      <CardContailwindCSS/>
+    </section>
+
+  )
+}
+
+export default App

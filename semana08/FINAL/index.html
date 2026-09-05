@@ -119,13 +119,35 @@
                 <span class="text-slate-500 font-medium">Sincronizando...</span>
             </div>
 
-
-
-            </div>
-
         </section>
 
     </main>
+
+    
+
+    <dialog id="modal-detalles" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 rounded-xl shadow-2xl border border-slate-200 backdrop:bg-slate-900/50 w-11/12 max-w-md">
+        <div class="flex  flex-col gap-4">
+
+            <div class="flex justify-between items-start border-b pb-2">
+                <h3 id="modal-nombre" class="text-xl font-bold text-slate-800"></h3>
+                <button id="btn-cerrar-modal" class="text-slate-400 hover:text-slate-800 font-bold">&times;</button>
+            </div>
+            
+            <img id="modal-imagen" src="" alt="" class="w-full h-full object-contain object-center rounded-lg">
+            
+            <div class="grid grid-cols-2 gap-2 text-sm">
+                <p><span class="font-bold">Género:</span> <span id="modal-genero"></span></p>
+                <p><span class="font-bold">Raza:</span> <span id="modal-raza"></span></p>
+                <p><span class="font-bold text-blue-600">Ki:</span> <span id="modal-ki"></span></p>
+            </div>
+            
+            <div class="mt-2 text-sm text-slate-600">
+                <p class="font-bold text-slate-800 mb-1">Descripción:</p>
+                <p id="modal-descripcion"></p>
+            </div>
+        </div>
+    </dialog>            
+
 
 
     <script src="main.js"></script>

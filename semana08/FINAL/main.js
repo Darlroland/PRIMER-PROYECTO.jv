@@ -31,12 +31,13 @@ const renderizarPersonajes = (personajes =[]) => {
 
 
   personajes.forEach((personaje) => {
+
     const li = document.createElement("li");
     li.className = 'flex items-center gap-4 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-neutral-300 transition-colors';
     li.innerHTML = `
 
       <div class="shrink-0 w-20 h-20 rounded-lg border border-neutral-200 flex items-center justify-center bg-neutral-50 p-2">      
-        <img src="${personaje.image}" alt="${personaje.name}" class="w-full h-full object-contain rounded-lg" />   
+        <img src="${personaje.image}" alt="${personaje.name}" class="w-full h-full object-contain object-center rounded-lg" />   
       </div>
 
       <div class="flex-1 min-w-0">
@@ -51,7 +52,11 @@ const renderizarPersonajes = (personajes =[]) => {
       </div>
 
       <div class="flex items-center gap-3 shrink-0">
-
+          
+          <button data-action="ver" data-id="${personaje.id}" class="text-xs text-blue-600 hover:text-blue-800 font-semibold transition-colors">
+              Ver
+          </button>
+          
           <button data-action="editar" data-id="${personaje.id}" class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">
               Editar
           </button>
@@ -65,6 +70,8 @@ const renderizarPersonajes = (personajes =[]) => {
     lista.appendChild(li);
   })
 }
+
+
 
 formulario.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -117,6 +124,12 @@ formulario.addEventListener("submit", async (e) => {
 })
 
 
+
+const modal = document.querySelector("#modal-detalles");
+const btnCerrarModal = document.querySelector("#btn-cerrar-modal");
+
+btnCerrarModal.addEventListener("click", () => modal.close());
+
 lista.addEventListener('click',async (event)=>{
   
   if (event.target.tagName ==='BUTTON'){
@@ -133,8 +146,7 @@ lista.addEventListener('click',async (event)=>{
       } catch (error) {
         console.log(error);
       }
-    }
-    else if (action === 'editar') {
+    }else if (action === 'editar') {
       try {
         const respuesta = await fetch(`${URL}/${id}`);
         const personaje = await respuesta.json();
@@ -155,9 +167,29 @@ lista.addEventListener('click',async (event)=>{
         
       } catch (error) {
         console.log("Error al obtener los datos del personaje", error);
+      }      
+    }else if (action==='ver') {
+      try{
+        const respuesta =await fetch(`${URL}/${id}`);
+        const personaje = await respuesta.json();
+
+        document.querySelector("#modal-nombre").textContent = personaje.name;
+        document.querySelector("#modal-imagen").src = personaje.image;
+        document.querySelector("#modal-genero").textContent = personaje.gender;
+        document.querySelector("#modal-raza").textContent = personaje.race;
+        document.querySelector("#modal-ki").textContent = personaje.ki;
+        document.querySelector("#modal-descripcion").textContent = personaje.description;
+
+        modal.showModal();
+      } catch (error) {
+        console.log("Error al cargar los detalles",error);
       }
     }  
-  }  
+  }
 })
 
 fetchPagina ();
+
+
+
+

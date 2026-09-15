@@ -79,7 +79,6 @@ formulario.addEventListener("submit", async (e) => {
   const corredorFormul= document.forms['form-personaje']
 
   const id = corredorFormul.id.value;
-
   const name=corredorFormul.name.value;
   const gender=corredorFormul.gender.value;
   const race=corredorFormul.race.value;
@@ -135,6 +134,8 @@ lista.addEventListener('click',async (event)=>{
   if (event.target.tagName ==='BUTTON'){
     const {action,id} = event.target.dataset
 
+
+    
     if (action=== 'eliminar') {
 
       const opciones= {

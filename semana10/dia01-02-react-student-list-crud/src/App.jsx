@@ -50,6 +50,7 @@ const App = () => {
     })
     setStudents(updatedStudents)
 
+    localStorage.setItem('STUDENTS', JSON.stringify(updatedStudents))
     setForm({
       id : '',
       name : '',
@@ -67,6 +68,8 @@ const App = () => {
     } 
 
     setStudents([...students, newStudent])
+
+
 
     setForm({
       id : '',
@@ -113,7 +116,7 @@ const App = () => {
       })
   }
 
-    const handleClear = () => {
+  const handleClear = () => {
     setForm({
       id : '',
       name : '',
@@ -186,7 +189,7 @@ const App = () => {
         return (
         
         <div className="flex justify-between items-center gap-2 bg-slate-100 px-4 
-          py-2 rounded-lg" kye= {student.id}>
+          py-2 rounded-lg" key= {student.id}>
           <div className="text-left">{student.name}</div>
           <div className="text-left">{student.city}</div>
           <div className="flex gap-2">

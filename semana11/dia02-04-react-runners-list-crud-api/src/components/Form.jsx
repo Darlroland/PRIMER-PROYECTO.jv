@@ -1,6 +1,6 @@
 const Form = () => {
   return (
-    <form id="form" className="mb-12 border border-neutral-200 rounded-xl p-6" novalidate>
+    <form id="form" className="mb-12 border border-neutral-200 rounded-xl p-6" noValidate>
       <input type="hidden" id="corredorId" />
 
       <p className="font-mono text-[11px] uppercase tracking-widest text-neutral-400 mb-4">inscripción</p>

@@ -7,6 +7,7 @@ const List = () => {
       </div>
 
       <ul id="lista" className="space-y-3 mb-4">
+
         <li className="flex items-center gap-4 bg-white border border-neutral-200 rounded-xl px-4 py-3 hover:border-neutral-300 transition-colors">
           <div className="shrink-0 w-14 h-14 rounded-lg border border-neutral-200 flex items-center justify-center bg-neutral-50">
             <span className="font-mono text-base font-medium">101</span>
@@ -29,6 +30,7 @@ const List = () => {
             </button>
           </div>
         </li>
+        
       </ul>
 
       <div id="vacio" className="hidden text-center py-16 border border-dashed border-neutral-200 rounded-xl">

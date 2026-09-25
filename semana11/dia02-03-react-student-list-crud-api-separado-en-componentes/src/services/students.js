@@ -1,4 +1,5 @@
-const API_URL= 'https://apibox.vercel.app/jXBlSicCTYmH90nrRBfh7gR3tn8vpuyL/api/personajes'
+const API_URL = 'https://apibox.vercel.app/jXBlSicCTYmH90nrRBfh7gR3tn8vpuyL/api/students'
+
 export const fetchStudents = async () => {
   const response = await fetch(API_URL)
 

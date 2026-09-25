@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Form from "./components/Form"
 import Header from "./components/Header"
 import List from "./components/List"
@@ -6,6 +6,8 @@ import Footer from "./components/Footer"
 
 const App = () => {
   // TODO: Darle la funcionalidad completa a este componente. Implementar el CRUD completo(Lista, crear, actualizar y eliminar) usando el apibox
+  
+  const [corredores, setCorredores]= useState([])
   const API_URL='https://apibox.vercel.app/jXBlSicCTYmH90nrRBfh7gR3tn8vpuyL/api/corredores'
   
   const fetchCorredores = async () => {
@@ -32,6 +34,9 @@ const App = () => {
           <Form />
 
           <List />
+
+          <pre>{JSON.stringify(corredores,null,2)}</pre>
+
         </div>
 
       </main>

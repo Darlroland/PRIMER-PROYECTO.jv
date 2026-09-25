@@ -62,7 +62,7 @@ const App = () => {
 
 
     const newStudent =     {
-      id: crypto.randomUUID,
+      id: crypto.randomUUID(),
       name: form.name,
       city: form.city
     } 
@@ -142,7 +142,7 @@ const App = () => {
             placeholder="Ex. Victor Villazón"
             required
             onChange={handleChange}
-            values= {form.name}
+            value={form.name}
           />
         </label>
 
@@ -155,7 +155,7 @@ const App = () => {
             placeholder="Ex. Chiclayo"
             required
             onChange={handleChange}
-            values= {form.city}
+            value={form.city}
           />
         </label>
 
@@ -184,7 +184,7 @@ const App = () => {
         </div>
 
 
-      {students.map((student, index) => {
+      {students.map((student) => {
 
         return (
         
